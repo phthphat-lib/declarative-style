@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "DeclarativeUIKit",
+        "repositoryURL": "https://gitlab.com/phthphat-share/declarativeuikit.git",
+        "state": {
+          "branch": "master",
+          "revision": "f04f6ffb33626274c24e6cfe584f37e139718cbd",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,9 +11,9 @@
 		A0E2177A2413555400C3AB36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E217792413555400C3AB36 /* SceneDelegate.swift */; };
 		A0E2177C2413555400C3AB36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E2177B2413555400C3AB36 /* ViewController.swift */; };
 		A0E2177F2413555400C3AB36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0E2177D2413555400C3AB36 /* Main.storyboard */; };
-		A0E217822413555400C3AB36 /* ExampleDeclarativeUIKit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A0E217802413555400C3AB36 /* ExampleDeclarativeUIKit.xcdatamodeld */; };
 		A0E217842413555800C3AB36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0E217832413555800C3AB36 /* Assets.xcassets */; };
 		A0E217872413555800C3AB36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0E217852413555800C3AB36 /* LaunchScreen.storyboard */; };
+		A0E217B724135DE600C3AB36 /* DeclarativeUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = A0E217B624135DE600C3AB36 /* DeclarativeUIKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +22,6 @@
 		A0E217792413555400C3AB36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A0E2177B2413555400C3AB36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A0E2177E2413555400C3AB36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A0E217812413555400C3AB36 /* ExampleDeclarativeUIKit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExampleDeclarativeUIKit.xcdatamodel; sourceTree = "<group>"; };
 		A0E217832413555800C3AB36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0E217862413555800C3AB36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0E217882413555800C3AB36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0E217B724135DE600C3AB36 /* DeclarativeUIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,7 +65,6 @@
 				A0E217832413555800C3AB36 /* Assets.xcassets */,
 				A0E217852413555800C3AB36 /* LaunchScreen.storyboard */,
 				A0E217882413555800C3AB36 /* Info.plist */,
-				A0E217802413555400C3AB36 /* ExampleDeclarativeUIKit.xcdatamodeld */,
 			);
 			path = ExampleDeclarativeUIKit;
 			sourceTree = "<group>";
@@ -86,6 +85,9 @@
 			dependencies = (
 			);
 			name = ExampleDeclarativeUIKit;
+			packageProductDependencies = (
+				A0E217B624135DE600C3AB36 /* DeclarativeUIKit */,
+			);
 			productName = ExampleDeclarativeUIKit;
 			productReference = A0E217742413555400C3AB36 /* ExampleDeclarativeUIKit.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +116,9 @@
 				Base,
 			);
 			mainGroup = A0E2176B2413555400C3AB36;
+			packageReferences = (
+				A0E217B524135DE600C3AB36 /* XCRemoteSwiftPackageReference "declarativeuikit" */,
+			);
 			productRefGroup = A0E217752413555400C3AB36 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -143,7 +148,6 @@
 			files = (
 				A0E2177C2413555400C3AB36 /* ViewController.swift in Sources */,
 				A0E217782413555400C3AB36 /* AppDelegate.swift in Sources */,
-				A0E217822413555400C3AB36 /* ExampleDeclarativeUIKit.xcdatamodeld in Sources */,
 				A0E2177A2413555400C3AB36 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,18 +345,24 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCVersionGroup section */
-		A0E217802413555400C3AB36 /* ExampleDeclarativeUIKit.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A0E217812413555400C3AB36 /* ExampleDeclarativeUIKit.xcdatamodel */,
-			);
-			currentVersion = A0E217812413555400C3AB36 /* ExampleDeclarativeUIKit.xcdatamodel */;
-			path = ExampleDeclarativeUIKit.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+/* Begin XCRemoteSwiftPackageReference section */
+		A0E217B524135DE600C3AB36 /* XCRemoteSwiftPackageReference "declarativeuikit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitlab.com/phthphat-share/declarativeuikit.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
 		};
-/* End XCVersionGroup section */
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A0E217B624135DE600C3AB36 /* DeclarativeUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0E217B524135DE600C3AB36 /* XCRemoteSwiftPackageReference "declarativeuikit" */;
+			productName = DeclarativeUIKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A0E2176C2413555400C3AB36 /* Project object */;
 }
