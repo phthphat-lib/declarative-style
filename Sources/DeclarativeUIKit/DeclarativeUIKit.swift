@@ -1,3 +1,6 @@
-struct DeclarativeUIKit {
-    var text = "Hello, World!"
-}
+import UIKit
+
+extension UIView: StackableViewDeclarative,
+    AppearenceDeclarative,
+    AutoLayoutDeclarative,
+    EventDeclarative {}
