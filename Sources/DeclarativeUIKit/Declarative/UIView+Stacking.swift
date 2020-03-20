@@ -9,7 +9,7 @@ import UIKit
 
 public protocol StackableViewDeclarative {}
 @available(iOS 11.0, *)
-extension StackableViewDeclarative where Self: UIView, Self: AutoLayoutDeclarative {
+extension StackableViewDeclarative where Self: UIView {
     fileprivate func _stack(_ axis: NSLayoutConstraint.Axis = .vertical, views: [UIView], spacing: CGFloat = 0, alignment: UIStackView.Alignment = .fill, distribution: UIStackView.Distribution = .fill) -> UIStackView {
         let stackView = UIStackView(arrangedSubviews: views)
         stackView.axis = axis

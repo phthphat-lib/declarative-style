@@ -47,14 +47,14 @@ extension AppearenceDeclarative where Self: UIView {
         return self
     }
     @discardableResult
-    public func with(cornerRadius: CGFloat) -> UIView {
+    public func with(cornerRadius: CGFloat) -> Self {
         self.layer.masksToBounds = true
         self.layer.cornerRadius = cornerRadius
         return self
     }
     
     @discardableResult
-    public func with(frame: CGRect) -> UIView {
+    public func with(frame: CGRect) -> Self {
         self.frame = frame
         return self
     }

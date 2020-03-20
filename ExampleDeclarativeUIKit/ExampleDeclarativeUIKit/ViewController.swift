@@ -19,8 +19,8 @@ class ViewController: UIViewController {
             UIView().hstack(
                 UIButton(title: "Left", titleColor: .systemBlue, target: self, action: #selector(pressLeftBtn)),
                 UIButton(title: "Middle", titleColor: .systemBlue, target: self, action: #selector(pressMiddleBtn)),
-                UIButton(title: "Right", titleColor: .systemBlue, target: self, action: #selector(pressRightBtn)),
-            distribution: .fillEqually
+                UIButton(title: "Right", titleColor: .systemBlue).withTap(target: self, action: #selector(pressRightBtn), for: .touchUpOutside),
+                distribution: .fillEqually
             ),
             
             UIView(backgroundColor: .systemGreen)
