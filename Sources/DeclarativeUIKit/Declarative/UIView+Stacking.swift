@@ -32,6 +32,44 @@ extension StackableViewDeclarative where Self: UIView {
     }
 }
 
+@available(iOS 9.0, *)
+extension StackableViewDeclarative where Self: UIStackView {
+    @discardableResult
+    public func with(margins: UIEdgeInsets) -> Self {
+        layoutMargins = margins
+        isLayoutMarginsRelativeArrangement = true
+        return self
+    }
+    
+    @discardableResult
+    public func pad(left: CGFloat) -> Self {
+        isLayoutMarginsRelativeArrangement = true
+        layoutMargins.left = left
+        return self
+    }
+    
+    @discardableResult
+    public func pad(top: CGFloat) -> Self {
+        isLayoutMarginsRelativeArrangement = true
+        layoutMargins.top = top
+        return self
+    }
+    
+    @discardableResult
+    public func pad(bottom: CGFloat) -> Self {
+        isLayoutMarginsRelativeArrangement = true
+        layoutMargins.bottom = bottom
+        return self
+    }
+    
+    @discardableResult
+    public func pad(right: CGFloat) -> Self {
+        isLayoutMarginsRelativeArrangement = true
+        layoutMargins.right = right
+        return self
+    }
+}
+
 extension CGSize {
     static public func equalEdge(_ edge: CGFloat) -> CGSize {
         return .init(width: edge, height: edge)

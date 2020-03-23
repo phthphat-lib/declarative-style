@@ -187,10 +187,4 @@ extension UIView {
         centerXToSuperview()
         centerYToSuperview()
     }
-    
-    convenience public init(backgroundColor: UIColor = .clear) {
-        self.init(frame: .zero)
-        self.backgroundColor = backgroundColor
-    }
-    
 }

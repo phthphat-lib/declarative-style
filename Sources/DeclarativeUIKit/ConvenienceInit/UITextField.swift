@@ -7,15 +7,8 @@
 import UIKit
 
 extension UITextField {
-
     public convenience init(placeholder: String) {
         self.init()
         self.placeholder = placeholder
-    }
-    
-    @discardableResult
-    open func onTextChange(_ target: Any, action: Selector) -> UITextField {
-        self.addTarget(target, action: action, for: .valueChanged)
-        return self
     }
 }

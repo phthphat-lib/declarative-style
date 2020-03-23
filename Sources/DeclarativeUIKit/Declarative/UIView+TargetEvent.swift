@@ -29,3 +29,11 @@ extension EventDeclarative where Self: UIButton {
         return self
     }
 }
+
+extension EventDeclarative where Self: UITextField {
+    @discardableResult
+    public func onTextChange(_ target: Any, action: Selector) -> Self {
+        self.addTarget(target, action: action, for: .valueChanged)
+        return self
+    }
+}
