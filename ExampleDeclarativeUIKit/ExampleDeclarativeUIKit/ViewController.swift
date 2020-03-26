@@ -13,13 +13,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.vstack(
+        vstack(
             UIView(backgroundColor: .systemYellow),
             
-            UIView().hstack(
+            hstack(
                 UIButton(title: "Left", titleColor: .systemBlue, target: self, action: #selector(pressLeftBtn)),
-                UIButton(title: "Middle", titleColor: .systemBlue, target: self, action: #selector(pressMiddleBtn)),
-                UIButton(title: "Right", titleColor: .systemBlue).withTap(target: self, action: #selector(pressRightBtn), for: .touchUpOutside),
+                UIButton(title: "Middle", titleColor: .systemBlue)
+                    .withTap(target: self, action: #selector(pressMiddleBtn), for: .touchUpInside),
+                UIButton(title: "Right", titleColor: .systemBlue, target: self, action: #selector(pressRightBtn)),
                 distribution: .fillEqually
             ),
             
