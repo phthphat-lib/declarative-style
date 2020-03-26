@@ -93,3 +93,33 @@ extension AppearenceDeclarative where Self: UIView {
         return self
     }
 }
+
+extension AppearenceDeclarative where Self: UITextField {
+    
+    @discardableResult
+    public func with(placeholder: String) -> Self {
+        self.placeholder = placeholder; return self
+    }
+    
+    @discardableResult
+    public func with(text: String) -> Self {
+        self.text = text; return self
+    }
+    
+    @discardableResult
+    public func with(font: UIFont) -> Self {
+        self.font = font; return self
+    }
+}
+
+extension AppearenceDeclarative where Self: UILabel {
+    @discardableResult
+    public func with(text: String) -> Self {
+        self.text = text; return self
+    }
+    
+    @discardableResult
+    public func with(font: UIFont) -> Self {
+        self.font = font; return self
+    }
+}

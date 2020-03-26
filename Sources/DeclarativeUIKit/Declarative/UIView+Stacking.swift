@@ -2,10 +2,12 @@
 //  UIView+Stacking.swift
 //
 //  Created by Brian Voong on 4/28/19.
-//  Copyright © 2019 Tieda Wei. All rights reserved.
+// 
 //
 
 import UIKit
+
+public typealias Spacer = UIView
 
 public protocol StackableViewDeclarative {}
 @available(iOS 11.0, *)

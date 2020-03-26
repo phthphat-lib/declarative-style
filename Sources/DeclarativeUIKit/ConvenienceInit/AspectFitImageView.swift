@@ -26,7 +26,8 @@ open class AspectFitImageView: UIImageView {
     }
     
     required public init?(coder aDecoder: NSCoder) {
-        fatalError()
+        NSMutableArray
+        fatalError("init(coder:) has not been implemented")
     }
     
 }
