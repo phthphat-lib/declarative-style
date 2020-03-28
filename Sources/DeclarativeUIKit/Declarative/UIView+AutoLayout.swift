@@ -7,25 +7,10 @@
 //
 
 import UIKit
-
-public struct AnchoredConstraints {
-    public var top, leading, bottom, trailing, width, height: NSLayoutConstraint?
-}
-
-@available(iOS 11.0, *)
-public enum Anchor {
-    case top(_ top: NSLayoutYAxisAnchor, constant: CGFloat = 0)
-    case leading(_ leading: NSLayoutXAxisAnchor, constant: CGFloat = 0)
-    case bottom(_ bottom: NSLayoutYAxisAnchor, constant: CGFloat = 0)
-    case trailing(_ trailing: NSLayoutXAxisAnchor, constant: CGFloat = 0)
-    case height(_ constant: CGFloat)
-    case width(_ constant: CGFloat)
-}
-
 // MARK: AutoLayout
 // Reference Video: https://youtu.be/iqpAP7s3b-8
 // Thanks to Brian Voong
-public protocol AutoLayoutDeclarative {}
+public protocol AutoLayoutDeclarative: DeclarativeStyle {}
 @available(iOS 11.0, *)
 extension AutoLayoutDeclarative where Self: UIView {
     func addConstraintsWithFormat(_ format: String, views: UIView...) {
@@ -154,6 +139,22 @@ extension AutoLayoutDeclarative where Self: UIView {
         }
         return anchor(top: superviewTopAnchor, leading: superviewLeadingAnchor, bottom: superviewBottomAnchor, trailing: superviewTrailingAnchor, padding: padding)
     }
+}
+
+
+
+public struct AnchoredConstraints {
+    public var top, leading, bottom, trailing, width, height: NSLayoutConstraint?
+}
+
+@available(iOS 11.0, *)
+public enum Anchor {
+    case top(_ top: NSLayoutYAxisAnchor, constant: CGFloat = 0)
+    case leading(_ leading: NSLayoutXAxisAnchor, constant: CGFloat = 0)
+    case bottom(_ bottom: NSLayoutYAxisAnchor, constant: CGFloat = 0)
+    case trailing(_ trailing: NSLayoutXAxisAnchor, constant: CGFloat = 0)
+    case height(_ constant: CGFloat)
+    case width(_ constant: CGFloat)
 }
 
 @available(iOS 11.0, *)

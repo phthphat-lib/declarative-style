@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public protocol EventDeclarative {}
+public protocol EventDeclarative: DeclarativeStyle {}
 
 @available(iOS 11.0, *)
 extension EventDeclarative where Self: UIView {

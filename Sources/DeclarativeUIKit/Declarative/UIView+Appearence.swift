@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public protocol AppearenceDeclarative {}
+public protocol AppearenceDeclarative: DeclarativeStyle {}
 @available(iOS 11.0, *)
 extension AppearenceDeclarative where Self: UIView {
     

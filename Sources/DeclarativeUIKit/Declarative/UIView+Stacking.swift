@@ -9,7 +9,7 @@ import UIKit
 
 public typealias Spacer = UIView
 
-public protocol StackableViewDeclarative {}
+public protocol StackableViewDeclarative: DeclarativeStyle {}
 
 @available(iOS 11.0, *)
 extension StackableViewDeclarative where Self: UIView {
