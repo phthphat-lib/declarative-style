@@ -13,12 +13,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        vstack(
-            UITextField().setUp({ tf in
+        vscroll(
+            UIView(backgroundColor: .systemBlue).with(height: 300),
+            UITextField().withSetUp({ tf in
                 tf.placeholder = "Type me"
-            })
-                .with(height: 130),
-            UIView(backgroundColor: .systemYellow),
+            }),
+            UIView(backgroundColor: .systemYellow)
+                .with(height: 200),
             hstack(
                 UIButton(title: "Left", titleColor: .systemBlue, target: self, action: #selector(pressLeftBtn)),
                 UIButton(title: "Middle", titleColor: .systemBlue)

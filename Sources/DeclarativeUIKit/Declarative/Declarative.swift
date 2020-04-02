@@ -17,7 +17,7 @@ extension DeclarativeStyle {
     }
     
     @discardableResult
-    public func setUp(_ setUp: (Self) -> Void) -> Self {
+    public func withSetUp(_ setUp: (Self) -> Void) -> Self {
         setUp(self)
         return self
     }
