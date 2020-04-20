@@ -3,20 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8396CCF8244DA223009FDFAF /* UILabelExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396CCE7244DA223009FDFAF /* UILabelExt.swift */; };
+		8396CCF9244DA223009FDFAF /* DeclarativeUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396CCE8244DA223009FDFAF /* DeclarativeUIKit.swift */; };
+		8396CCFA244DA223009FDFAF /* UIView+TargetEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396CCEA244DA223009FDFAF /* UIView+TargetEvent.swift */; };
+		8396CCFB244DA223009FDFAF /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396CCEB244DA223009FDFAF /* UIView+AutoLayout.swift */; };
+		8396CCFC244DA223009FDFAF /* UIView+Appearence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396CCEC244DA223009FDFAF /* UIView+Appearence.swift */; };
+		8396CCFD244DA223009FDFAF /* UIView+Stacking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396CCED244DA223009FDFAF /* UIView+Stacking.swift */; };
+		8396CCFE244DA223009FDFAF /* Declarative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396CCEE244DA223009FDFAF /* Declarative.swift */; };
 		A0E217782413555400C3AB36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E217772413555400C3AB36 /* AppDelegate.swift */; };
 		A0E2177A2413555400C3AB36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E217792413555400C3AB36 /* SceneDelegate.swift */; };
 		A0E2177C2413555400C3AB36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E2177B2413555400C3AB36 /* ViewController.swift */; };
 		A0E2177F2413555400C3AB36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0E2177D2413555400C3AB36 /* Main.storyboard */; };
 		A0E217842413555800C3AB36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0E217832413555800C3AB36 /* Assets.xcassets */; };
 		A0E217872413555800C3AB36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0E217852413555800C3AB36 /* LaunchScreen.storyboard */; };
-		A0E217B724135DE600C3AB36 /* DeclarativeUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = A0E217B624135DE600C3AB36 /* DeclarativeUIKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8396CCE7244DA223009FDFAF /* UILabelExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelExt.swift; sourceTree = "<group>"; };
+		8396CCE8244DA223009FDFAF /* DeclarativeUIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeclarativeUIKit.swift; sourceTree = "<group>"; };
+		8396CCEA244DA223009FDFAF /* UIView+TargetEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+TargetEvent.swift"; sourceTree = "<group>"; };
+		8396CCEB244DA223009FDFAF /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		8396CCEC244DA223009FDFAF /* UIView+Appearence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Appearence.swift"; sourceTree = "<group>"; };
+		8396CCED244DA223009FDFAF /* UIView+Stacking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Stacking.swift"; sourceTree = "<group>"; };
+		8396CCEE244DA223009FDFAF /* Declarative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Declarative.swift; sourceTree = "<group>"; };
 		A0E217742413555400C3AB36 /* ExampleDeclarativeUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleDeclarativeUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0E217772413555400C3AB36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0E217792413555400C3AB36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,13 +45,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0E217B724135DE600C3AB36 /* DeclarativeUIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8396CCE5244DA223009FDFAF /* DeclarativeUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				8396CCE6244DA223009FDFAF /* Extension */,
+				8396CCE8244DA223009FDFAF /* DeclarativeUIKit.swift */,
+				8396CCE9244DA223009FDFAF /* Declarative */,
+			);
+			name = DeclarativeUIKit;
+			path = ../../Sources/DeclarativeUIKit;
+			sourceTree = "<group>";
+		};
+		8396CCE6244DA223009FDFAF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8396CCE7244DA223009FDFAF /* UILabelExt.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8396CCE9244DA223009FDFAF /* Declarative */ = {
+			isa = PBXGroup;
+			children = (
+				8396CCEA244DA223009FDFAF /* UIView+TargetEvent.swift */,
+				8396CCEB244DA223009FDFAF /* UIView+AutoLayout.swift */,
+				8396CCEC244DA223009FDFAF /* UIView+Appearence.swift */,
+				8396CCED244DA223009FDFAF /* UIView+Stacking.swift */,
+				8396CCEE244DA223009FDFAF /* Declarative.swift */,
+			);
+			path = Declarative;
+			sourceTree = "<group>";
+		};
 		A0E2176B2413555400C3AB36 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +101,7 @@
 		A0E217762413555400C3AB36 /* ExampleDeclarativeUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				8396CCE5244DA223009FDFAF /* DeclarativeUIKit */,
 				A0E217772413555400C3AB36 /* AppDelegate.swift */,
 				A0E217792413555400C3AB36 /* SceneDelegate.swift */,
 				A0E2177B2413555400C3AB36 /* ViewController.swift */,
@@ -86,7 +130,6 @@
 			);
 			name = ExampleDeclarativeUIKit;
 			packageProductDependencies = (
-				A0E217B624135DE600C3AB36 /* DeclarativeUIKit */,
 			);
 			productName = ExampleDeclarativeUIKit;
 			productReference = A0E217742413555400C3AB36 /* ExampleDeclarativeUIKit.app */;
@@ -117,7 +160,6 @@
 			);
 			mainGroup = A0E2176B2413555400C3AB36;
 			packageReferences = (
-				A0E217B524135DE600C3AB36 /* XCRemoteSwiftPackageReference "declarativeuikit" */,
 			);
 			productRefGroup = A0E217752413555400C3AB36 /* Products */;
 			projectDirPath = "";
@@ -146,9 +188,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8396CCFE244DA223009FDFAF /* Declarative.swift in Sources */,
+				8396CCF9244DA223009FDFAF /* DeclarativeUIKit.swift in Sources */,
 				A0E2177C2413555400C3AB36 /* ViewController.swift in Sources */,
+				8396CCFC244DA223009FDFAF /* UIView+Appearence.swift in Sources */,
 				A0E217782413555400C3AB36 /* AppDelegate.swift in Sources */,
+				8396CCFB244DA223009FDFAF /* UIView+AutoLayout.swift in Sources */,
+				8396CCF8244DA223009FDFAF /* UILabelExt.swift in Sources */,
+				8396CCFA244DA223009FDFAF /* UIView+TargetEvent.swift in Sources */,
 				A0E2177A2413555400C3AB36 /* SceneDelegate.swift in Sources */,
+				8396CCFD244DA223009FDFAF /* UIView+Stacking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,25 +393,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		A0E217B524135DE600C3AB36 /* XCRemoteSwiftPackageReference "declarativeuikit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://gitlab.com/phthphat-share/declarativeuikit.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		A0E217B624135DE600C3AB36 /* DeclarativeUIKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A0E217B524135DE600C3AB36 /* XCRemoteSwiftPackageReference "declarativeuikit" */;
-			productName = DeclarativeUIKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A0E2176C2413555400C3AB36 /* Project object */;
 }
