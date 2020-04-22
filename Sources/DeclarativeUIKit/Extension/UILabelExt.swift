@@ -22,15 +22,3 @@ extension UILabel {
         return lhs
     }
 }
-
-extension NSAttributedString {
-    static public func +(lhs: NSAttributedString, rhs: NSAttributedString) -> NSMutableAttributedString {
-        
-        let attributeText = NSMutableAttributedString(attributedString: lhs)
-        attributeText.append(rhs)
-        return attributeText
-    }
-    static public func +=(lhs: inout NSAttributedString, rhs: NSAttributedString) {
-        lhs = lhs + rhs
-    }
-}
