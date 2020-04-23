@@ -21,8 +21,8 @@ public enum AttributeTextConfig {
 }
 
 extension String {
-    public func withAttribute(_ config: AttributeTextConfig...) -> NSAttributedString {
-        let attribute = config.reduce([NSAttributedString.Key: Any]()) { pre, item in
+    public func withAttribute(_ configs: [AttributeTextConfig]) -> NSAttributedString {
+        let attribute = configs.reduce([NSAttributedString.Key: Any]()) { pre, item in
             var newAttribute = pre
             switch item {
             case .backgroundColor(let color):
@@ -45,6 +45,9 @@ extension String {
             return newAttribute
         }
         return NSAttributedString(string: self, attributes: attribute)
+    }
+    public func withAttribute(_ configs: AttributeTextConfig...) -> NSAttributedString {
+        return withAttribute(configs)
     }
 }
 
