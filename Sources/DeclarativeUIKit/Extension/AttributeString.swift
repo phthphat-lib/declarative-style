@@ -46,7 +46,7 @@ extension String {
         }
         return NSAttributedString(string: self, attributes: attribute)
     }
-    public func withAttribute(_ configs: AttributeTextConfig...) -> NSAttributedString {
+    public func withAttribute(configs: AttributeTextConfig...) -> NSAttributedString {
         return withAttribute(configs)
     }
 }
