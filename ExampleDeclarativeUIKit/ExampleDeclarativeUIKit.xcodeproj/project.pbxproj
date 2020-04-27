@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8326A15524519EF4005C74EC /* TestScrollVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326A15424519EF4005C74EC /* TestScrollVC.swift */; };
 		8396CCF8244DA223009FDFAF /* UILabelExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396CCE7244DA223009FDFAF /* UILabelExt.swift */; };
 		8396CCF9244DA223009FDFAF /* DeclarativeUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396CCE8244DA223009FDFAF /* DeclarativeUIKit.swift */; };
 		8396CCFA244DA223009FDFAF /* UIView+TargetEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396CCEA244DA223009FDFAF /* UIView+TargetEvent.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8326A15424519EF4005C74EC /* TestScrollVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScrollVC.swift; sourceTree = "<group>"; };
 		8396CCE7244DA223009FDFAF /* UILabelExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelExt.swift; sourceTree = "<group>"; };
 		8396CCE8244DA223009FDFAF /* DeclarativeUIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeclarativeUIKit.swift; sourceTree = "<group>"; };
 		8396CCEA244DA223009FDFAF /* UIView+TargetEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+TargetEvent.swift"; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				A0E217832413555800C3AB36 /* Assets.xcassets */,
 				A0E217852413555800C3AB36 /* LaunchScreen.storyboard */,
 				A0E217882413555800C3AB36 /* Info.plist */,
+				8326A15424519EF4005C74EC /* TestScrollVC.swift */,
 			);
 			path = ExampleDeclarativeUIKit;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				8396CCFB244DA223009FDFAF /* UIView+AutoLayout.swift in Sources */,
 				8396CCF8244DA223009FDFAF /* UILabelExt.swift in Sources */,
 				8396CCFA244DA223009FDFAF /* UIView+TargetEvent.swift in Sources */,
+				8326A15524519EF4005C74EC /* TestScrollVC.swift in Sources */,
 				A0E2177A2413555400C3AB36 /* SceneDelegate.swift in Sources */,
 				8396CCFD244DA223009FDFAF /* UIView+Stacking.swift in Sources */,
 			);
@@ -346,6 +350,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 685RR58PW6;
 				INFOPLIST_FILE = ExampleDeclarativeUIKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -363,6 +368,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 685RR58PW6;
 				INFOPLIST_FILE = ExampleDeclarativeUIKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
