@@ -20,8 +20,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = .init(windowScene: scene)
         window?.makeKeyAndVisible()
-        
-        window?.rootViewController = UINavigationController(rootViewController: SecondVC())
+//<<<<<<< HEAD
+//
+//        window?.rootViewController = UINavigationController(rootViewController: SecondVC())
+//=======
+        window?.rootViewController = UINavigationController(rootViewController: TestScrollVC())
+//>>>>>>> 6512227a92c728cb1001b762f4d5ca99cb71d8eb
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

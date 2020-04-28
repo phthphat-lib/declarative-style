@@ -84,14 +84,14 @@ extension AppearenceDeclarative where Self: UIView {
         layer.rasterizationScale = scale ? UIScreen.main.scale : 1
         return self
     }
-    @discardableResult
-    public func withBorder(borderWidth: CGFloat = 0, borderColor: UIColor = UIColor.clear, cornerRadius: CGFloat) -> Self {
-        self.layer.masksToBounds        = true
-        self.layer.borderWidth          = borderWidth
-        self.layer.borderColor          = borderColor.cgColor
-        self.layer.cornerRadius         = cornerRadius
-        return self
-    }
+//    @discardableResult
+//    public func withBorder(borderWidth: CGFloat = 0, borderColor: UIColor = UIColor.clear, cornerRadius: CGFloat) -> Self {
+//        self.layer.masksToBounds        = true
+//        self.layer.borderWidth          = borderWidth
+//        self.layer.borderColor          = borderColor.cgColor
+//        self.layer.cornerRadius         = cornerRadius
+//        return self
+//    }
 }
 
 extension AppearenceDeclarative where Self: UITextField {

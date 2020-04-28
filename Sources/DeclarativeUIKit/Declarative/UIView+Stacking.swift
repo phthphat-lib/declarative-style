@@ -32,7 +32,7 @@ extension StackableViewDeclarative where Self: UIView {
         stackView.alignment = alignment
         stackView.distribution = distribution
         addSubview(stackView)
-        stackView.fillSuperviewSafeAreaLayoutGuide()
+        stackView.fillSuperview()
         return stackView
     }
     //MARK: Declarative programing
@@ -52,7 +52,13 @@ extension StackableViewDeclarative where Self: UIView {
     public func vscroll(_ views: UIView...) -> UIScrollView {
         let scrollView = UIScrollView()
         self.addSubview(scrollView)
-        scrollView.fillSuperview()
+        
+        NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: self.topAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        ])
         scrollView.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
         scrollView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         
@@ -113,7 +119,12 @@ extension StackableViewDeclarative where Self: UIViewController {
         stackView.alignment = alignment
         stackView.distribution = distribution
         view.addSubview(stackView)
-        stackView.fillSuperviewSafeAreaLayoutGuide()
+        stackView.anchor(
+            .top(view.safeAreaLayoutGuide.topAnchor, constant: 0),
+            .leading(view.safeAreaLayoutGuide.leadingAnchor, constant: 0),
+            .trailing(view.safeAreaLayoutGuide.trailingAnchor, constant: 0),
+            .bottom(view.bottomAnchor, constant: 0)
+        )
         return stackView
     }
     
@@ -135,8 +146,15 @@ extension StackableViewDeclarative where Self: UIViewController {
     public func vscroll(_ views: UIView...) -> UIScrollView {
         let scrollView = UIScrollView()
         self.view.addSubview(scrollView)
-        scrollView.fillSuperviewSafeAreaLayoutGuide()
-        scrollView.heightAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.heightAnchor).isActive = true
+//        scrollView.fillSuperviewSafeAreaLayoutGuide()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
+        ])
+        scrollView.heightAnchor.constraint(equalTo: self.view.heightAnchor).isActive = true
         scrollView.widthAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.widthAnchor).isActive = true
         
         let stV = UIStackView(arrangedSubviews: views)

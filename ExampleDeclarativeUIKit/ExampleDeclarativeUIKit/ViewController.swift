@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import DeclarativeUIKit
 
 class ViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         vscroll(
@@ -55,6 +55,25 @@ class ViewController: UIViewController {
     @objc func tapOnBottomView() {
         print("Tap on bottom view")
     }
-    
 }
 
+extension UIView {
+    convenience init(backgroundColor: UIColor) {
+        self.init()
+        self.backgroundColor = backgroundColor
+    }
+}
+
+extension UIButton {
+    convenience public init(title: String, titleColor: UIColor, font: UIFont = .systemFont(ofSize: 14), backgroundColor: UIColor = .clear, target: Any? = nil, action: Selector? = nil) {
+        self.init(type: .system)
+        setTitle(title, for: .normal)
+        setTitleColor(titleColor, for: .normal)
+        self.titleLabel?.font = font
+        
+        self.backgroundColor = backgroundColor
+        if let action = action {
+            addTarget(target, action: action, for: .primaryActionTriggered)
+        }
+    }
+}
