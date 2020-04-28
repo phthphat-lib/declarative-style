@@ -155,37 +155,16 @@ public enum Anchor {
     case trailing(_ trailing: NSLayoutXAxisAnchor, constant: CGFloat = 0)
     case height(_ constant: CGFloat)
     case width(_ constant: CGFloat)
-}
-
-@available(iOS 11.0, *)
-extension UIView {
     
-    open func centerXTo(_ anchor: NSLayoutXAxisAnchor) {
-        translatesAutoresizingMaskIntoConstraints = false
-        centerXAnchor.constraint(equalTo: anchor).isActive = true
-    }
-    
-    open func centerYTo(_ anchor: NSLayoutYAxisAnchor) {
-        translatesAutoresizingMaskIntoConstraints = false
-        centerYAnchor.constraint(equalTo: anchor).isActive = true
-    }
-    
-    open func centerXToSuperview() {
-        translatesAutoresizingMaskIntoConstraints = false
-        if let superviewCenterXAnchor = superview?.centerXAnchor {
-            centerXAnchor.constraint(equalTo: superviewCenterXAnchor).isActive = true
+    public var constant: CGFloat {
+        switch self {
+        case .top(_, let constant),
+             .leading(_, let constant),
+             .trailing(_, let constant),
+             .bottom(_, let constant):
+            return constant
+        case .height(let constant), .width(let constant):
+            return constant
         }
-    }
-    
-    open func centerYToSuperview() {
-        translatesAutoresizingMaskIntoConstraints = false
-        if let superviewCenterYAnchor = superview?.centerYAnchor {
-            centerYAnchor.constraint(equalTo: superviewCenterYAnchor).isActive = true
-        }
-    }
-    
-    open func centerSuperview() {
-        centerXToSuperview()
-        centerYToSuperview()
     }
 }
