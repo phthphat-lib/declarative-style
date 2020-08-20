@@ -31,7 +31,7 @@ class ViewController: UIViewController {
                     UIView(backgroundColor: .systemPink),
                     spacing: 20,
                     distribution: .fillEqually
-                ).with(margins: .allSides(10)),
+                ).with(padding: .allSides(10)),
                 
                 distribution: .fillEqually
             ).with(height: 100),

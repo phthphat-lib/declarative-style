@@ -38,4 +38,14 @@ vstack(
 ```
 
 And here we have: 
-![Sample](./Image/sample.png)
+
+<img src="./Image/sample.png" style="width: 400px"/>
+
+## Installation
+Use Swift Package Manager with link: [https://gitlab.com/phthphat-share/declarativeuikit.git](https://gitlab.com/phthphat-share/declarativeuikit.git)
+
+On Xcode, choose **File -> Swift Packages -> Add Package Dependency...** and paste the link
+
+<img src="./Image/spm-installation.png" style="width: 500px" />
+
+Support: iOS 11 and later

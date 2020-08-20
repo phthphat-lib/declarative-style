@@ -75,8 +75,8 @@ extension StackableViewDeclarative where Self: UIView {
 @available(iOS 9.0, *)
 extension StackableViewDeclarative where Self: UIStackView {
     @discardableResult
-    public func with(margins: UIEdgeInsets) -> Self {
-        layoutMargins = margins
+    public func with(padding: UIEdgeInsets) -> Self {
+        layoutMargins = padding
         isLayoutMarginsRelativeArrangement = true
         return self
     }

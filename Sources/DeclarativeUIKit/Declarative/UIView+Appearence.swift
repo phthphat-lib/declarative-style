@@ -59,6 +59,7 @@ extension AppearenceDeclarative where Self: UIView {
         return self
     }
     @discardableResult
+    ///Only have effect when the view has frame or bound
     public func withRoundCorners(rectCorner: UIRectCorner, radius: CGFloat) -> Self {
         let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: rectCorner, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()
@@ -68,6 +69,7 @@ extension AppearenceDeclarative where Self: UIView {
     }
     
     @discardableResult
+    ///Only have effect when the view has frame or bound
     public func withShadow(color: UIColor, opacity: Float = 0.5, offSet: CGSize, radius: CGFloat = 1, cornerRadius: CGFloat? = nil, scale: Bool = true) -> Self {
         layer.masksToBounds = false
         layer.shadowColor = color.cgColor
