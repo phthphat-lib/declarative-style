@@ -42,7 +42,7 @@ And here we have:
 <img src="./Image/sample.png" style="width: 400px"/>
 
 ## Installation
-Use Swift Package Manager with link: [https://gitlab.com/phthphat-share/declarativeuikit.git](https://gitlab.com/phthphat-share/declarativeuikit.git)
+Use Swift Package Manager with link: [https://github.com/phthphat-lib/declarative-uikit.git](https://github.com/phthphat-lib/declarative-uikit.git)
 
 On Xcode, choose **File -> Swift Packages -> Add Package Dependency...** and paste the link
 
