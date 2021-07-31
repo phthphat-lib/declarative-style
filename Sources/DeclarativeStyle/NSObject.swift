@@ -13,7 +13,7 @@ extension NSObject {
     /// var viewRef: UIView! = UIView()
     /// ```
     @discardableResult
-    public func ref<T: NSObject>(to_ variable: inout T?) -> Self {
+    public func ref<T: NSObject>(to variable: inout T?) -> Self {
         variable = self as? T
         return self
     }
