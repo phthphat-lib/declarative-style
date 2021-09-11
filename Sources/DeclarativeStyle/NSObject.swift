@@ -1,5 +1,6 @@
 
 import Foundation
+import UIKit
 
 extension NSObject {
     /// Make the variable reference to the object, often using in declarative ui coding
@@ -39,5 +40,13 @@ extension NSObject {
         else {
             fatalError("Only 1 event is allowed to register when using declarative style")
         }
+    }
+}
+
+extension UIView {
+    @discardableResult
+    public func setVal<T>(_ kp: ReferenceWritableKeyPath<UIView, T>, value: T) -> Self {
+        self[keyPath: kp] = value
+        return self
     }
 }
