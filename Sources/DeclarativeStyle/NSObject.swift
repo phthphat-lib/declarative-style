@@ -21,14 +21,14 @@ extension NSObject {
 }
 
 extension NSObject {
-    private static var greenRoomKey: UInt32 = 893
+    private static var uniqueKey: String = UUID().uuidString
     
     var _action: ((NSObject) -> ())? {
         get {
-            return objc_getAssociatedObject(self, &Self.greenRoomKey) as? (NSObject) -> ()
+            return objc_getAssociatedObject(self, &Self.uniqueKey) as? (NSObject) -> ()
         }
         set {
-            objc_setAssociatedObject(self, &Self.greenRoomKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &Self.uniqueKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     

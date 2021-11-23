@@ -35,14 +35,14 @@ extension UIView {
         self.translatesAutoresizingMaskIntoConstraints = false
         if #available(iOS 11.0, *), inSafeArea {
             self.topAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.topAnchor, constant: padding.top).isActive = true
-            self.bottomAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.bottomAnchor, constant: padding.bottom).isActive = true
+            self.bottomAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.bottomAnchor, constant: -padding.bottom).isActive = true
             self.leadingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.leadingAnchor, constant: padding.left).isActive = true
-            self.trailingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.trailingAnchor, constant: padding.right).isActive = true
+            self.trailingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.trailingAnchor, constant: -padding.right).isActive = true
         } else {
             self.topAnchor.constraint(equalTo: superview.topAnchor, constant: padding.top).isActive = true
-            self.bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: padding.bottom).isActive = true
+            self.bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: -padding.bottom).isActive = true
             self.leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: padding.left).isActive = true
-            self.trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: padding.right).isActive = true
+            self.trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -padding.right).isActive = true
         }
     }
 }
