@@ -64,6 +64,7 @@ public extension UIRefreshControl {
 
 //Pull to refresh
 extension UITableView {
+    @available(iOS 10.0, *)
     @discardableResult
     func setPullToRefresh(_ onRefresh: @escaping (_ handler: @escaping () -> Void) -> Void) -> Self {
         let refreshControl = UIRefreshControl()
