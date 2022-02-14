@@ -47,3 +47,32 @@ public extension UITextField {
         return self
     }
 }
+
+
+public extension UIRefreshControl {
+    @discardableResult
+    func onEvent(_ event: UIControl.Event = .primaryActionTriggered, _ handle: @escaping (UIRefreshControl) -> Void) -> Self {
+        stopAppWhen1EventIsAlreadyRegister()
+        self._action = { refreshCtrl in
+            handle(refreshCtrl as! UIRefreshControl)
+        }
+        self.addTarget(self, action: #selector(action_Objc(sender:)), for: event)
+        return self
+    }
+}
+
+
+//Pull to refresh
+extension UITableView {
+    @discardableResult
+    func setPullToRefresh(_ onRefresh: @escaping (_ handler: @escaping () -> Void) -> Void) -> Self {
+        let refreshControl = UIRefreshControl()
+        refreshControl.onEvent { [weak refreshControl] _ in
+            onRefresh { [weak refreshControl] in
+                refreshControl?.endRefreshing()
+            }
+        }
+        self.refreshControl = refreshControl
+        return self
+    }
+}
