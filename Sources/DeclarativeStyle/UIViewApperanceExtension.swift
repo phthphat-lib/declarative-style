@@ -54,4 +54,18 @@ extension UIView {
         }
         return self
     }
+    
+    @discardableResult
+    public func userInteractive(_ enable: Bool) -> Self {
+        self.isUserInteractionEnabled = enable
+        return self
+    }
+}
+
+extension UITextView {
+    @discardableResult
+    public func customFont(_ font: UIFont) -> Self {
+        self.font = font
+        return self
+    }
 }
