@@ -18,6 +18,19 @@ extension NSObject {
         variable = self as? T
         return self
     }
+    
+    ///Append this object to exist array
+    @discardableResult
+    public func append<T: NSObject>(to list: inout Array<T>) -> Self {
+        if let instance = self as? T {
+            list.append(instance)
+        } else {
+            #if DEBUG
+            fatalError("Could not append to list")
+            #endif
+        }
+        return self
+    }
 }
 
 extension NSObject {
