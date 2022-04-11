@@ -1,3 +1,3 @@
 # DeclarativeStyle
 
-A description of this package.
+Write UIKit like HTML in declarative style
