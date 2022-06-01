@@ -1,42 +1,60 @@
-
 extension UIView {
     @discardableResult
-    public func stackUpper(_ view: UIView, options: StackOption...) -> Self {
+    public func stackUpper(_ view: UIView, options: StackOption...) -> UIView {
         self.addSubview(view)
+        var anchorsNeedLowPriority: Set<NSLayoutConstraint> = []
         for option in options {
             switch option {
             case .top(let value):
-                self.topAnchor.constraint(equalTo: view.topAnchor, constant: -value).isActive = true
+                anchorsNeedLowPriority.insert(self.topAnchor.constraint(equalTo: view.topAnchor, constant: -value))
             case .bottom(let value):
-                self.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: value).isActive = true
+                anchorsNeedLowPriority.insert(self.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: value))
             case .left(let value):
-                self.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -value).isActive = true
+                anchorsNeedLowPriority.insert(
+                    self.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -value)
+                )
             case .right(let value):
-                self.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: value).isActive = true
+                anchorsNeedLowPriority.insert(
+                    self.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: value)
+                )
             case .centerLeft:
-                self.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+                anchorsNeedLowPriority.insert(
+                    self.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+                )
                 let anchor = self.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+                anchorsNeedLowPriority.insert(anchor)
                 anchor.priority = .defaultLow
-                anchor.isActive = true
             case .centerRight:
-                self.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+                anchorsNeedLowPriority.insert(
+                    self.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+                )
                 let anchor = self.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-                anchor.priority = .defaultLow
-                anchor.isActive = true
+                anchorsNeedLowPriority.insert(anchor)
             case .centerTop:
-                self.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+                anchorsNeedLowPriority.insert(
+                    self.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+                )
                 let anchor = self.topAnchor.constraint(equalTo: view.topAnchor)
-                anchor.priority = .defaultLow
-                anchor.isActive = true
+                anchorsNeedLowPriority.insert(anchor)
             case .centerBottom:
-                self.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-                let anchor = self.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-                anchor.priority = .defaultLow
-                anchor.isActive = true
+                anchorsNeedLowPriority.insert(
+                    self.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+                )
+                anchorsNeedLowPriority.insert(
+                    self.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+                )
             case .center:
-                self.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-                self.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+                anchorsNeedLowPriority.insert(
+                    self.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+                )
+                anchorsNeedLowPriority.insert(
+                    self.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+                )
             }
+        }
+        for anchor in anchorsNeedLowPriority {
+            anchor.priority = .defaultLow
+            anchor.isActive = true
         }
         return self
     }
