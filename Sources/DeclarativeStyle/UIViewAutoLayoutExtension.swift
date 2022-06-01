@@ -1,3 +1,12 @@
+//
+//  UIViewAutoLayoutExtension.swift
+//  
+//
+//  Created by Phat Pham on 03/07/2021.
+//
+
+import UIKit
+
 extension UIView {
     @discardableResult
     public func stackUpper(_ view: UIView, options: StackOption...) -> UIView {
